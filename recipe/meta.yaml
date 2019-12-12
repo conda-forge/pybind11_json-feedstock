@@ -11,18 +11,20 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
     - {{ compiler('cxx') }}
     - cmake
     - ninja  # [win]
-    - make  # [unix]
+    - make   # [unix]
   host:
     - python
     - pybind11 >=2.2.4,<3.0
     - nlohmann_json >=3.2.0,<4.0
+  run:
+    - python
 
 test:
   commands:
