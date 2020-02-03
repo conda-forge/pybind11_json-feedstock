@@ -1,6 +1,6 @@
 {% set name = "pybind11_json" %}
-{% set version = "0.2.3" %}
-{% set sha256 = "844f704010b704ef43f788f9a1efcc8ab17f59af2445e7468be9c83504a5f8d9" %}
+{% set version = "0.2.4" %}
+{% set sha256 = "45957f8564e921a412a6de49c578ef1faf3b04e531e859464853e26e1c734ea5" %}
 
 package:
   name: {{ name|lower }}
