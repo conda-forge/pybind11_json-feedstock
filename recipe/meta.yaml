@@ -1,6 +1,6 @@
 {% set name = "pybind11_json" %}
-{% set version = "0.2.4" %}
-{% set sha256 = "45957f8564e921a412a6de49c578ef1faf3b04e531e859464853e26e1c734ea5" %}
+{% set version = "0.2.5" %}
+{% set sha256 = "f0d0a4c2366327baad80ea95d1b014d28acc21f395b3d9fc690b2c40d5c26014" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
@@ -41,7 +41,7 @@ about:
   license: BSD 3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'Using nlohmann::json with pybind11'
+  summary: Using nlohmann::json with pybind11
 
   description: |
     pybind11_json is an nlohmann::json to pybind11 bridge, it allows you to
