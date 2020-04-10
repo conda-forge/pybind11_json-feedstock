@@ -282,6 +282,3 @@ Feedstock Maintainers
 * [@martinRenou](https://github.com/martinRenou/)
 * [@wjakob](https://github.com/wjakob/)
 
-
-<!-- dummy commit to enable rerendering -->
-
