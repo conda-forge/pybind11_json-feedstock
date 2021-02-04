@@ -1,6 +1,6 @@
 {% set name = "pybind11_json" %}
-{% set version = "0.2.7" %}
-{% set sha256 = "fc22638f11e1dba6ea404c91316cf501e1d777159140e57461c6657ec69742f1" %}
+{% set version = "0.2.8" %}
+{% set sha256 = "fcce424d238c52f2f12a7c5163e8ae07b221388f936d6c5b513d99de7d8fcfee" %}
 
 package:
   name: {{ name|lower }}
@@ -31,13 +31,13 @@ requirements:
 
 test:
   commands:
-    - test -d ${PREFIX}/include/pybind11_json                                                                # [unix]
-    - test -f ${PREFIX}/include/pybind11_json/pybind11_json.hpp                                              # [unix]
-    - test -f ${PREFIX}/share/cmake/pybind11_json/pybind11_jsonConfig.cmake                                  # [unix]
-    - test -f ${PREFIX}/share/cmake/pybind11_json/pybind11_jsonConfigVersion.cmake                           # [unix]
-    - if exist %LIBRARY_INC%\pybind11_json\pybind11_json.hpp (exit 0) else (exit 1)                          # [win]
-    - if exist %LIBRARY_SHARE%\cmake\pybind11_json\pybind11_jsonConfig.cmake (exit 0) else (exit 1)          # [win]
-    - if exist %LIBRARY_SHARE%\cmake\pybind11_json\pybind11_jsonConfigVersion.cmake (exit 0) else (exit 1)   # [win]
+    - test -d ${PREFIX}/include/pybind11_json                                                      # [unix]
+    - test -f ${PREFIX}/include/pybind11_json/pybind11_json.hpp                                    # [unix]
+    - test -f ${PREFIX}/share/cmake/pybind11_json/pybind11_jsonConfig.cmake                        # [unix]
+    - test -f ${PREFIX}/share/cmake/pybind11_json/pybind11_jsonConfigVersion.cmake                 # [unix]
+    - if not exist %LIBRARY_INC%\pybind11_json\pybind11_json.hpp (exit 1)                          # [win]
+    - if not %LIBRARY_SHARE%\cmake\pybind11_json\pybind11_jsonConfig.cmake (exit 1)                # [win]
+    - if not %LIBRARY_SHARE%\cmake\pybind11_json\pybind11_jsonConfigVersion.cmake (exit 1)         # [win]
 
 about:
   home: http://github.com/pybind/pybind11_json
