@@ -31,13 +31,13 @@ requirements:
 
 test:
   commands:
-    - test -d ${PREFIX}/include/pybind11_json                                                      # [unix]
-    - test -f ${PREFIX}/include/pybind11_json/pybind11_json.hpp                                    # [unix]
-    - test -f ${PREFIX}/share/cmake/pybind11_json/pybind11_jsonConfig.cmake                        # [unix]
-    - test -f ${PREFIX}/share/cmake/pybind11_json/pybind11_jsonConfigVersion.cmake                 # [unix]
-    - if not exist %LIBRARY_INC%\pybind11_json\pybind11_json.hpp (exit 1)                          # [win]
-    - if not %LIBRARY_SHARE%\cmake\pybind11_json\pybind11_jsonConfig.cmake (exit 1)                # [win]
-    - if not %LIBRARY_SHARE%\cmake\pybind11_json\pybind11_jsonConfigVersion.cmake (exit 1)         # [win]
+    - test -d ${PREFIX}/include/pybind11_json                                                    # [unix]
+    - test -f ${PREFIX}/include/pybind11_json/pybind11_json.hpp                                  # [unix]
+    - test -f ${PREFIX}/share/cmake/pybind11_json/pybind11_jsonConfig.cmake                      # [unix]
+    - test -f ${PREFIX}/share/cmake/pybind11_json/pybind11_jsonConfigVersion.cmake               # [unix]
+    - if not exist %LIBRARY_INC%\pybind11_json\pybind11_json.hpp (exit 1)                        # [win]
+    - if not %LIBRARY_LIB%\cmake\pybind11_json\pybind11_jsonConfig.cmake (exit 1)                # [win]
+    - if not %LIBRARY_LIB%\cmake\pybind11_json\pybind11_jsonConfigVersion.cmake (exit 1)         # [win]
 
 about:
   home: http://github.com/pybind/pybind11_json
