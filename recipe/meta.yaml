@@ -1,6 +1,6 @@
 {% set name = "pybind11_json" %}
-{% set version = "0.2.13" %}
-{% set sha256 = "6b12ddb4930a3135322890318fc15c4a69134f21120ea82163827c11411107a3" %}
+{% set version = "0.2.14" %}
+{% set sha256 = "bc4ad7e308add59886a961c21f3ba431e43fe7faa2ef5bd9925c66d042d28cde" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 0
 
 requirements:
   build:
@@ -19,6 +19,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - pybind11                               # [build_platform != target_platform]
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
     - cmake
     - ninja  # [win]
     - make   # [unix]
